@@ -17,10 +17,10 @@ class Post(models.Model):
     excerpt = models.TextField(blank=True)
     
     class Meta:
-        ordering = ["-created_on"]
+        ordering = ["created_on"]
 
     def __str__(self):
-        return f"Comment {self.title} by {self.author}"
+        return f"Comment {self.body} by {self.author}"
    
 
             
