@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import Post
+from .models import Post, Comment
 
-@admin.register(Post)
+
 class PostAdmin(admin.ModelAdmin):
     list_display = ("title", "author", "status", "created_on")
     list_filter = ("status", "created_on", "author")
@@ -11,3 +11,5 @@ class PostAdmin(admin.ModelAdmin):
 
 
 # Register your models here.
+admin.site.register(Post)
+admin.site.register(Comment)
