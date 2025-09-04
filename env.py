@@ -10,4 +10,4 @@ os.environ.setdefault(
     "wh@td0y0um3an"
 )
 os.environ.setdefault(
-    "CLOUDINARY_URL", "cloudinary://<your_api_key>:<your_api_secret>@djbuxfwmx")
+    "CLOUDINARY_URL", "cloudinary://933199737864716:r_2k3uJ2HJKgrT0QE5HZV714aFs@djbuxfwmx")
