@@ -1,12 +1,11 @@
-from .models import CollaborateRequest
 from django import forms
+from .models import CollaborateRequest
 
-class CollaborateForm():
-   """
-    Form for submitting collaboration requests.
-    Includes name, email, and message fields linked to the CollaborateRequest model.
+
+class CollaborateForm(forms.ModelForm):
     """
-   class meta:
+    Form for submitting collaboration requests.
+    """
+    class Meta:
         model = CollaborateRequest
-        fields = ('name', 'email', 'message')
-        
+        fields = ["name", "email", "message"]
