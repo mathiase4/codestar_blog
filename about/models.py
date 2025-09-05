@@ -4,6 +4,11 @@ from cloudinary.models import CloudinaryField
 
 
 class About(models.Model):
+    """
+    This model stores the content for the About page.
+    It includes a title, profile image, main text content,
+    and the last updated date.
+    """
     title = models.CharField(max_length=200)
     profile_image = CloudinaryField('image', default ='placeholder')
     updated_on = models.DateTimeField(auto_now=True)
@@ -14,6 +19,9 @@ class About(models.Model):
 
 
 class CollaborateRequest(models.Model):
+    """
+    Stores a single collaboration request message
+    """
     name = models.CharField(max_length=200)
     email = models.EmailField()
     message = models.TextField()
